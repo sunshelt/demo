@@ -1,8 +1,42 @@
 <template>
   <div id="container">
     <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>Explore UI Components</p>
   </div>
+  <ion-card>
+    <ion-item>
+      <ion-icon :icon="pin" slot="start"></ion-icon>
+      <ion-label>ion-item in a card, icon left, button right</ion-label>
+      <ion-button fill="outline" slot="end">View</ion-button>
+    </ion-item>
+
+    <ion-card-content>
+      This is content, without any paragraph or header tags,
+      within an ion-card-content element.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-item href="#" class="ion-activated">
+      <ion-icon :icon="wifi" slot="start"></ion-icon>
+      <ion-label>Card Link Item 1 activated</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon :icon="wine" slot="start"></ion-icon>
+      <ion-label>Card Link Item 2</ion-label>
+    </ion-item>
+
+    <ion-item class="ion-activated">
+      <ion-icon :icon="warning" slot="start"></ion-icon>
+      <ion-label>Card Button Item 1 activated</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon :icon="walk" slot="start"></ion-icon>
+      <ion-label>Card Button Item 2</ion-label>
+    </ion-item>
+  </ion-card>
 </template>
 
 <script lang="ts">
